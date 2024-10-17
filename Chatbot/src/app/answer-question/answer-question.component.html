@@ -1,0 +1,25 @@
+<h2>Answer Question</h2>
+
+<form (submit)="answerQuestion()">
+  <label for="question">Question</label>
+  <div id="submission-wrapper">
+    <input type="text" id="question" list="suggestions" name="question" placeholder="Enter your question" [(ngModel)]="question">
+    <datalist id="suggestions">
+      <option value="Are dolphin fish?">
+      <option value="What should i do as a tourist in Vienna">
+      <option value="Give me a checklist for some chores">
+      <option value="What is the capital of Austria">
+    </datalist>
+    <button type="submit">Answer</button>
+  </div>
+</form>
+
+<div id="chat-history">
+  @for (message of history(); track $index){
+    @if(message.fromUser){
+      <markdown [data]="message.msg" class="user-message"></markdown>
+    } @else {
+      <markdown [data]="message.msg" class="bot-message"></markdown>
+    }
+  }
+</div>
