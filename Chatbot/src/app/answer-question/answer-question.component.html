@@ -1,7 +1,7 @@
-<h2>Answer Question</h2>
+<h2>A Chatbot to answer your questions!</h2>
 
 <form (submit)="answerQuestion()">
-  <label for="question">Question</label>
+  <label for="question">Question:</label>
   <div id="submission-wrapper">
     <input type="text" id="question" list="suggestions" name="question" placeholder="Enter your question" [(ngModel)]="question">
     <datalist id="suggestions">
@@ -12,6 +12,7 @@
     </datalist>
     <button type="submit">Answer</button>
   </div>
+  <p id="status">{{status()}}</p>
 </form>
 
 <div id="chat-history">
@@ -23,3 +24,5 @@
     }
   }
 </div>
+
+<button (click)="clearHistory()" id="clear-history">Start over</button>

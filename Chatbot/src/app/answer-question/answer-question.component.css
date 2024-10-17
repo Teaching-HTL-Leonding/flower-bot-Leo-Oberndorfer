@@ -24,7 +24,7 @@ form button {
   gap: 1rem;
   padding: 1rem 0;
   overflow-y: scroll;
-  height: 80vh;
+  height: 70vh;
 }
 
 .user-message {
@@ -42,4 +42,21 @@ form button {
   border-radius: 0.5rem;
   background-color: #ece4ff;
   display: inline-block;
+}
+
+#clear-history {
+  padding: 0.5rem 1rem;
+  background-color: #9380ff;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+}
+
+#status {
+  margin: 5px 0;
 }
